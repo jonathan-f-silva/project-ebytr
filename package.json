@@ -27,6 +27,9 @@
     "url": "https://github.com/jonathan-f-silva/project-ebytr/issues"
   },
   "homepage": "https://github.com/jonathan-f-silva/project-ebytr#readme",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
   "devDependencies": {
     "cypress": "^9.6.1",
     "cypress-cucumber-preprocessor": "^4.3.1",
