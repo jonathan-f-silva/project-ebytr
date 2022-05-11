@@ -1,0 +1,35 @@
+{
+  "name": "project-ebytr",
+  "version": "0.1.0",
+  "description": "App estilo todo list para o desafio de blitz de carreira da Trybe",
+  "main": "index.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo testes unitários e linting vão aqui",
+    "test:e2e": "cypress open",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathan-f-silva/project-ebytr.git"
+  },
+  "keywords": [
+    "express",
+    "mongo",
+    "react",
+    "node"
+  ],
+  "author": "Jonathan Ferreira <j0n4t@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathan-f-silva/project-ebytr/issues"
+  },
+  "homepage": "https://github.com/jonathan-f-silva/project-ebytr#readme",
+  "devDependencies": {
+    "cypress": "^9.6.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "husky": "^8.0.1"
+  }
+}
