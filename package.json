@@ -7,9 +7,12 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo testes unitários e linting vão aqui",
-    "test:e2e": "cypress open",
-    "prepare": "husky install"
+    "dev:api": "npm run dev --prefix api",
+    "dev:client": "npm run dev --prefix client",
+    "cy:open": "cypress open",
+    "postinstall": "cd api && npm i; cd ../client && npm i",
+    "prepare": "husky install",
+    "test": "echo testes unitários e linting vão aqui"
   },
   "repository": {
     "type": "git",
