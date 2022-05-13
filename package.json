@@ -2,17 +2,18 @@
   "name": "project-ebytr",
   "version": "0.1.0",
   "description": "App estilo todo list para o desafio de blitz de carreira da Trybe",
-  "main": "index.ts",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "dev:api": "npm run dev --prefix api",
-    "dev:client": "npm run dev --prefix client",
     "cy:open": "cypress open",
-    "postinstall": "cd api && npm i; cd ../client && npm i",
+    "dev:api": "cd api && yarn dev",
+    "dev:client": "cd client && yarn dev",
+    "dev": "yarn dev:api & yarn dev:client",
+    "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
+    "postinstall": "cd api && yarn; cd ../client && yarn",
     "prepare": "husky install",
-    "test": "echo testes unitários e linting vão aqui"
+    "test": "echo testes unitários vão aqui"
   },
   "repository": {
     "type": "git",
@@ -34,8 +35,25 @@
     "nonGlobalStepDefinitions": true
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
     "cypress": "^9.6.1",
     "cypress-cucumber-preprocessor": "^4.3.1",
-    "husky": "^8.0.1"
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-trybe-backend": "^1.0.4",
+    "eslint-config-trybe-frontend": "^1.2.3",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-mocha": "^10.0.4",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-sonarjs": "^0.13.0",
+    "husky": "^8.0.1",
+    "typescript": "^4.6.4"
   }
 }
