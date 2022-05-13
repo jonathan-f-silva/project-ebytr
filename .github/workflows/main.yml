@@ -1,4 +1,6 @@
-on: [push, pull_request]
+on:
+  pull_request:
+    types: [opened, synchronize]
 
 jobs:
   checks:
@@ -15,8 +17,5 @@ jobs:
       - name: Instalando as dependências
         run: yarn
 
-      - name: Executando linter
-        run: yarn lint
-
-      - name: Executando testes unitários
+      - name: Executando linters e testes
         run: yarn test

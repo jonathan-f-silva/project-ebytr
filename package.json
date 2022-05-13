@@ -6,14 +6,17 @@
     "doc": "docs"
   },
   "scripts": {
-    "cy:open": "cypress open",
     "dev:api": "cd api && yarn dev",
     "dev:client": "cd client && yarn dev",
     "dev": "yarn dev:api & yarn dev:client",
-    "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
+    "dev:test": "yarn dev & yarn test:cy",
     "postinstall": "cd api && yarn; cd ../client && yarn",
     "prepare": "husky install",
-    "test": "echo testes unitários vão aqui"
+    "test": "yarn test:compile && yarn test:lint && yarn test:unit",
+    "test:compile": "yarn tsc --noEmit",
+    "test:lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
+    "test:unit": "echo testes unitários vão aqui",
+    "test:cy": "cypress open"
   },
   "repository": {
     "type": "git",
