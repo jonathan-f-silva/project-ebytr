@@ -15,8 +15,5 @@ jobs:
       - name: Instalando as dependências
         run: yarn
 
-      - name: Executando linter
-        run: yarn lint
-
-      - name: Executando testes unitários
+      - name: Executando linters e testes
         run: yarn test
