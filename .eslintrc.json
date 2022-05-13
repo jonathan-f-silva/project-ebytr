@@ -43,18 +43,18 @@
       "extends": [
         "eslint-config-trybe-frontend"
       ],
+      "parser": "@typescript-eslint/parser",
+      "plugins": [
+        "react",
+        "@typescript-eslint"
+      ],
+      "settings": {
+        "import/resolver": {
+          "typescript": {}
+        }
+      },
       "rules": {
         "react/react-in-jsx-scope": "off",
-        "import/extensions": [
-          "error",
-          "ignorePackages",
-          {
-            "js": "never",
-            "jsx": "never",
-            "ts": "never",
-            "tsx": "never"
-          }
-        ],
         "react/jsx-filename-extension": [
           2,
           {
@@ -64,6 +64,16 @@
               ".ts",
               ".tsx"
             ]
+          }
+        ],
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never"
           }
         ]
       }
