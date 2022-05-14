@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn test
+SRC_PATTERN="(api|client)"
+if git diff --cached --name-only | grep --quiet "$SRC_PATTERN"
+then
+  yarn test
+fi
