@@ -33,6 +33,7 @@
     }
   },
   "rules": {
+    "no-unused-vars": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -54,6 +55,7 @@
         "eslint-config-trybe-backend"
       ],
       "rules": {
+        "no-unused-vars": "off",
         "no-console": "off"
       }
     },
@@ -76,6 +78,7 @@
         }
       },
       "rules": {
+        "no-unused-vars": "off",
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [
           2,
