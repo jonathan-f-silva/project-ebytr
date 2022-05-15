@@ -15,7 +15,8 @@
     "test": "yarn test:compile && yarn test:lint && yarn test:unit",
     "test:compile": "yarn tsc --noEmit",
     "test:lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
-    "test:unit": "echo testes unitários vão aqui"
+    "test:unit": "yarn test:ui --run",
+    "test:ui": "cd ui && yarn test"
   },
   "repository": {
     "type": "git",
