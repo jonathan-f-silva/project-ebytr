@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { TodosContextType } from '../@types/custom';
 import { TodosContext } from '../context/TodosContext';
+import TEST_IDS from '../testIds';
 
 export default function TodoList() {
   const { todos } = useContext(TodosContext) as TodosContextType;
@@ -8,7 +9,7 @@ export default function TodoList() {
   if (!todos.length) return <div>Sem tarefas. Adicione uma!</div>;
 
   return (
-    <ul data-testid="todos-list">
+    <ul data-testid={ TEST_IDS.todoList }>
       { todos.map(({ id, description, status, createdAt }) => (
         <li key={ id }>
           <span>{description}</span>
