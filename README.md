@@ -27,9 +27,14 @@ git clone https://github.com/jonathan-f-silva/project-ebytr
 yarn
 ```
 
-- Para iniciar em modo de desenvolvimento (hot reloading e cypress aberto)
+- Para iniciar em modo de desenvolvimento
 ```shell
-yarn dev:test
+yarn dev
+```
+
+- Para iniciar os testes E2E no Cypress
+```shell
+yarn test:cy
 ```
 
 ## Tecnologias utilizadas
