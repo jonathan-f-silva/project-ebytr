@@ -1,6 +1,6 @@
 import { Then } from 'cypress-cucumber-preprocessor/steps';
 
-import TEST_IDS from './testids';
+import TEST_IDS from './testIds';
 
 Then('eu vejo o título {string} na aba do navegador', (title) => {
   cy.title().should('include', title);

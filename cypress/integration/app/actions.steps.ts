@@ -1,6 +1,6 @@
 import { Given } from 'cypress-cucumber-preprocessor/steps';
 
-import TEST_IDS from './testids';
+import TEST_IDS from './testIds';
 
 const url = 'http://localhost:3000';
 
@@ -13,6 +13,6 @@ Given('eu digito uma tarefa com o texto {string}', (texto) => {
     .type(texto);
 });
 
-Given('eu clico no botão {string}', (texto) => {
-  cy.contains(texto).click();
+Given('eu clico no botão de adicionar tarefa', () => {
+  cy.get(TEST_IDS.todoAddButton).click();
 });

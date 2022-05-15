@@ -17,6 +17,6 @@ Funcionalidade: Lista de tarefas Ebytr ToDo
     Dado que eu entro no app
     E eu vejo uma lista de tarefas vazia
     Quando eu digito uma tarefa com o texto "Estudar testes unitários"
-    E eu clico no botão "Adicionar tarefa"
+    E eu clico no botão de adicionar tarefa
     Então eu vejo uma tarefa com o texto "Estudar testes unitários" na lista
     E o campo de texto para digitar uma tarefa está vazio
