@@ -32,9 +32,9 @@ yarn
 yarn dev
 ```
 
-- Para iniciar os testes E2E no Cypress
+- Para abrir os testes E2E no Cypress
 ```shell
-yarn test:cy
+yarn cy:open
 ```
 
 ## Tecnologias utilizadas

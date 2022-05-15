@@ -59,10 +59,10 @@
         "no-console": "off"
       }
     },
-    // client
+    // ui
     {
       "files": [
-        "./client/**/*.[jt]s?(x)"
+        "./ui/**/*.[jt]s?(x)"
       ],
       "extends": [
         "eslint-config-trybe-frontend"
