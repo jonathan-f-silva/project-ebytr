@@ -11,8 +11,7 @@ Then('eu vejo uma lista de tarefas vazia', () => {
 });
 
 Then('eu vejo um campo de texto para digitar uma tarefa', () => {
-  cy.get('input[placeholder="Digite uma tarefa"]');
-  // cy.contains('input');
+  cy.get(TEST_IDS.todoInput);
 });
 
 Then('eu vejo um botão para adicionar tarefas', () => {
@@ -22,4 +21,9 @@ Then('eu vejo um botão para adicionar tarefas', () => {
 Then('eu vejo uma tarefa com o texto {string} na lista', (texto) => {
   cy.get(TEST_IDS.todoList)
     .contains(texto);
+});
+
+Then('o campo de texto para digitar uma tarefa está vazio', () => {
+  cy.get(TEST_IDS.todoInput)
+    .should('have.value', '');
 });

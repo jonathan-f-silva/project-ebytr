@@ -19,4 +19,4 @@ Funcionalidade: Lista de tarefas Ebytr ToDo
     Quando eu digito uma tarefa com o texto "Estudar testes unitários"
     E eu clico no botão "Adicionar tarefa"
     Então eu vejo uma tarefa com o texto "Estudar testes unitários" na lista
-    E o campo de texto está vazio
+    E o campo de texto para digitar uma tarefa está vazio
