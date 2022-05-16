@@ -33,6 +33,7 @@
     }
   },
   "rules": {
+    "no-unused-vars": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -54,13 +55,14 @@
         "eslint-config-trybe-backend"
       ],
       "rules": {
+        "no-unused-vars": "off",
         "no-console": "off"
       }
     },
-    // client
+    // ui
     {
       "files": [
-        "./client/**/*.[jt]s?(x)"
+        "./ui/**/*.[jt]s?(x)"
       ],
       "extends": [
         "eslint-config-trybe-frontend"
@@ -76,6 +78,7 @@
         }
       },
       "rules": {
+        "no-unused-vars": "off",
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [
           2,

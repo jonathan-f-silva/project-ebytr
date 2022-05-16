@@ -1,5 +1,7 @@
 # Projeto Ebytr ToDo
 
+![Status do projeto: em progresso](https://img.shields.io/badge/status%20do%20projeto-em%20progresso-yellow)
+
 Aplicação estilo lista de tarefas em desenvolvimento para o Desafio da Blitz de Carreira da Trybe.
 
 Com esse app é possível:
@@ -11,8 +13,29 @@ Com esse app é possível:
 <!-- gif da aplicação -->
 <!-- link do deploy -->
 
-<!-- ## Rodando localmente -->
-<!-- instruções de como rodar -->
+## Rodando localmente
+
+É necessário ter [Git](https://git-scm.com), [Node 16](https://nodejs.org/pt-br/) e [Yarn](https://yarnpkg.com/getting-started/install) instalados na máquina. Para desenvolvimento, é recomendado usar o [VSCode](https://code.visualstudio.com).
+
+- Clone o repositório
+```shell
+git clone https://github.com/jonathan-f-silva/project-ebytr
+```
+
+- Instale as dependências
+```shell
+yarn
+```
+
+- Para iniciar em modo de desenvolvimento
+```shell
+yarn dev
+```
+
+- Para abrir os testes E2E no Cypress
+```shell
+yarn cy:open
+```
 
 ## Tecnologias utilizadas
 - Mongo
