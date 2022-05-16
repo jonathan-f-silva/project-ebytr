@@ -12,11 +12,12 @@
     "dev": "yarn dev:api & yarn dev:ui",
     "postinstall": "cd api && yarn; cd ../ui && yarn",
     "prepare": "husky install",
-    "test": "yarn test:compile && yarn test:lint && yarn test:unit",
     "test:compile": "yarn tsc --noEmit",
+    "test:api": "cd api && yarn test",
     "test:lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
-    "test:unit": "yarn test:ui --run",
-    "test:ui": "cd ui && yarn test"
+    "test:ui": "cd ui && yarn test",
+    "test:unit": "yarn test:api && yarn test:ui --run",
+    "test": "yarn test:compile && yarn test:lint && yarn test:unit"
   },
   "repository": {
     "type": "git",
@@ -44,10 +45,12 @@
     "cypress-cucumber-preprocessor": "^4.3.1",
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-config-trybe-backend": "^1.0.4",
     "eslint-config-trybe-frontend": "^1.2.3",
     "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-chai-friendly": "^0.7.2",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
