@@ -14,6 +14,7 @@
     "prepare": "husky install",
     "test:compile": "yarn tsc --noEmit",
     "test:api": "cd api && yarn test",
+    "test:api:coverage": "cd api && yarn test:coverage",
     "test:lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
     "test:ui": "cd ui && yarn test",
     "test:unit": "yarn test:api && yarn test:ui --run",
