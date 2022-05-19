@@ -1,14 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-SRC_PATTERN="(api|ui)"
-
-git add .
-git stash -m "husky stash pre-push"
-
-if git diff --cached --name-only | grep --quiet -E "$SRC_PATTERN"
-then
-  yarn test
-fi
-
-git stash pop
+yarn test
