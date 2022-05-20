@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  reverse-proxy:
+  ebytr:
     build: reverse-proxy
     ports:
       - 80:80
