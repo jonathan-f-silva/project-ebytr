@@ -6,12 +6,14 @@ Aplicação estilo lista de tarefas em desenvolvimento para o Desafio da Blitz d
 
 Com esse app é possível:
 - Listar e ordenar tarefas pela descrição, data de criação e status
-- Criar, editar e remover tarefas
-- Alterar status de uma tarefa
+- [WIP] Criar, editar e remover tarefas
+- [WIP] Alterar status de uma tarefa
 
-<!-- ## Demonstração -->
-<!-- gif da aplicação -->
-<!-- link do deploy -->
+## Demonstração
+
+![Adicionando duas tarefas do Ebytr ToDo](docs/ebytr-demo.gif)
+
+> Acesse o [deploy da aplicação aqui](https://ebytr-jonathan-f-silva.cloud.okteto.net)
 
 ## Rodando localmente
 
@@ -37,11 +39,17 @@ yarn dev
 yarn cy:open
 ```
 
+Caso tenha o Docker Compose instalado, é possível rodar o sistema usando
+```shell
+yarn compose:up
+```
+
 ## Tecnologias utilizadas
 - Mongo
 - Node
 - React
 - Express
+- Docker
 
 ## [Plano de testes](docs/TESTING.md)
 
@@ -52,10 +60,16 @@ yarn cy:open
 - [x] Adicionar tarefas
 - [ ] Editar tarefas
 - [ ] Remover tarefas
+- [ ] Alterar status da tarefa
 - [x] Estilização inicial
+- [x] Dark mode
 
 ### Backend (api)
-- [ ] GET `/todos`
-- [ ] POST `/todos`
-- [ ] PUT `/todos`
-- [ ] DELETE `/todos`
+- [x] GET `/todos`
+- [x] POST `/todos`
+- [x] PUT `/todos`
+- [x] DELETE `/todos`
+
+### App
+- [x] Dockerizar
+- [x] Deploy
