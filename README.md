@@ -44,3 +44,18 @@ yarn cy:open
 - Express
 
 ## [Plano de testes](docs/TESTING.md)
+
+## Roadmap
+
+### Frontend (api)
+- [x] Listar tarefas
+- [x] Adicionar tarefas
+- [ ] Editar tarefas
+- [ ] Remover tarefas
+- [x] Estilização inicial
+
+### Backend (api)
+- [ ] GET `/todos`
+- [ ] POST `/todos`
+- [ ] PUT `/todos`
+- [ ] DELETE `/todos`

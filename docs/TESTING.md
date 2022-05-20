@@ -11,17 +11,15 @@
 
 ## Tipos de testes
 - E2E
-    - Caminhos felizes
-    
-- Integração
-    - API
-        - Rotas
-    - Web
-        - Páginas
-
-- Unitários
+  - Caminhos felizes: BDD com Cucumber e Cypress
+- Integração e Unitários
+  - API
+    - Rotas
     - Domínio
-    - Serviços
+  - UI
+    - Páginas: Vitest
+    - Componentes: Vitest
+
 
 ## Mitigação de riscos
-- Husky configurado para evitar commits que falham em testes ou linter
+- Husky configurado para evitar commits que falham em testes unitários ou linter

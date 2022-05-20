@@ -22,6 +22,7 @@
   ],
   "settings": {
     "import/resolver": {
+      "typescript": {},
       "node": {
         "extensions": [
           ".js",
@@ -52,11 +53,31 @@
         "./api/**/*.[jt]s?(x)"
       ],
       "extends": [
-        "eslint-config-trybe-backend"
+        "eslint-config-trybe-backend",
+        "plugin:chai-friendly/recommended",
+        "airbnb-typescript/base"
       ],
+      "parserOptions": {
+        "ecmaVersion": 2019,
+        "sourceType": "module",
+        "project": "./api/tsconfig.json"
+      },
       "rules": {
         "no-unused-vars": "off",
-        "no-console": "off"
+        "no-console": "off",
+        "max-lines-per-function": "off",
+        "mocha/no-mocha-arrows": "off",
+        "@typescript-eslint/no-unused-expressions": "off",
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never"
+          }
+        ]
       }
     },
     // ui
@@ -72,11 +93,6 @@
         "react",
         "@typescript-eslint"
       ],
-      "settings": {
-        "import/resolver": {
-          "typescript": {}
-        }
-      },
       "rules": {
         "no-unused-vars": "off",
         "react/react-in-jsx-scope": "off",
