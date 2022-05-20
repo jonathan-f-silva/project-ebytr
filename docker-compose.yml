@@ -1,0 +1,53 @@
+version: '3.9'
+services:
+  reverse-proxy:
+    build: reverse-proxy
+    ports:
+      - 80:80
+    depends_on:
+      api:
+        condition: service_healthy
+      ui:
+        condition: service_healthy
+    restart: always
+
+  ui:
+    build: ui
+    ports:
+      - 80
+    environment:
+      - VITE_BACKEND=api:3001
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "lsof", "-t", "-i:80"]
+      interval: 3s
+      timeout: 10s
+      retries: 5
+
+  api:
+    build: api
+    ports:
+      - 3001
+    environment:
+      - DB_HOST=db
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "lsof", "-t", "-i:3001"]
+      interval: 3s
+      timeout: 10s
+      retries: 5
+
+  db:
+    image: mongo
+    ports:
+      - 27017
+    restart: always
+    healthcheck:
+      test: ["CMD", "pgrep", "mongod"]
+      interval: 3s
+      timeout: 10s
+      retries: 5
