@@ -67,8 +67,9 @@ yarn compose:up
 ### Backend (api)
 - [x] GET `/todos`
 - [x] POST `/todos`
-- [x] PUT `/todos`
-- [x] DELETE `/todos`
+- [x] PUT `/todos/:id`
+- [x] DELETE `/todos/:id`
+- [x] PATCH `/todos/:id/status`
 
 ### App
 - [x] Dockerizar
