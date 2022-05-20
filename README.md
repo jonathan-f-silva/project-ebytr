@@ -60,7 +60,8 @@ yarn compose:up
 - [x] Adicionar tarefas
 - [ ] Editar tarefas
 - [ ] Remover tarefas
-- [ ] Alterar status da tarefa
+- [x] Ordenar tarefas
+- [x] Alterar status da tarefa
 - [x] Estilização inicial
 - [x] Dark mode
 
