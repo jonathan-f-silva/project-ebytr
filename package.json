@@ -8,7 +8,7 @@
   "scripts": {
     "compose:up": "docker-compose up --build -d",
     "compose:down": "docker-compose down",
-    "cy:open": "cypress open",
+    "cy:open": "yarn dev & cypress open",
     "dev:api": "cd api && yarn dev",
     "dev:ui": "cd ui && yarn dev",
     "dev": "yarn dev:api & yarn dev:ui",
@@ -17,9 +17,10 @@
     "test:compile": "yarn tsc --noEmit",
     "test:api": "cd api && yarn test",
     "test:api:coverage": "cd api && yarn test:coverage",
-    "test:ui:coverage": "cd ui && yarn test:coverage",
-    "test:lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
     "test:ui": "cd ui && yarn test",
+    "test:ui:coverage": "cd ui && yarn test:coverage",
+    "test:coverage": "yarn test:api:coverage && yarn test:ui:coverage",
+    "test:lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
     "test:unit": "yarn test:api && yarn test:ui --run",
     "test": "yarn test:compile && yarn test:lint && yarn test:unit"
   },
@@ -66,5 +67,8 @@
     "eslint-plugin-sonarjs": "^0.13.0",
     "husky": "^8.0.1",
     "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "mongodb": "^4.6.0"
   }
 }
