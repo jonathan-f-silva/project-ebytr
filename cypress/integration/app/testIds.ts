@@ -1,7 +1,8 @@
 const TEST_IDS = {
-  todoAddButton: '[data-testid="todos__add-btn"]',
-  todoInput: '[data-testid="todos__add-input"]',
-  todoList: '[data-testid="todos__list"]',
+  todoAddButton: 'todos__add-btn',
+  todoInput: 'todos__add-input',
+  todoList: 'todos__list',
+  todoDelButton: 'todos__del-btn',
 };
 
 export default TEST_IDS;

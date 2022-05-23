@@ -19,4 +19,29 @@ Funcionalidade: Lista de tarefas Ebytr ToDo
     Quando eu digito uma tarefa com o texto "Estudar testes unitários"
     E eu clico no botão de adicionar tarefa
     Então eu vejo uma tarefa com o texto "Estudar testes unitários" na lista
+    E a tarefa 1 tem o status "A fazer"
     E o campo de texto para digitar uma tarefa está vazio
+
+  Cenário: Removendo uma tarefa
+    Dado que eu entro no app
+    E eu adiciono 3 tarefas
+    Quando eu removo a tarefa 2
+    Então devem existir 2 tarefas
+    E existe a tarefa 1
+    E existe a tarefa 3
+    E não existe a tarefa 2
+  
+  # Cenário: Editando uma tarefa
+  #   Dado que eu entro no app
+  #   Quando eu adiciono uma tarefa com o texto "Estudar testes de integração"
+  #   E eu edito a tarefa 1 para ter o texto "Estudar testes E2E"
+  #   Então eu vejo uma tarefa com o texto "Estudar testes E2E" na lista
+  #   E eu não vejo uma tarefa com o texto "Estudar testes de integração" na lista
+
+  # Cenário: Alterando o status da tarefa
+  #   Dado que eu entro no app
+  #   E eu adiciono 2 tarefas
+  #   E todas as tarefas tem o status "A fazer"
+  #   Quando eu clico no status da tarefa 2
+  #   Então a tarefa 2 tem o status "Em andamento"
+  #   E a tarefa 1 tem o status "A fazer"
