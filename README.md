@@ -44,34 +44,34 @@ Caso tenha o Docker Compose instalado, é possível rodar o sistema usando
 yarn compose:up
 ```
 
-## Tecnologias utilizadas
-- Mongo
-- Node
-- React
-- Express
-- Docker
+## Aprendizados e Tecnologias
 
-## [Plano de testes](docs/TESTING.md)
+Nesse projeto aprendi muitas coisas e coloquei em prática muitas ferramentas e
+conceitos bacanas que queria utilizar, aqui uma lista:
 
-## Roadmap
+### API e DB
+- Mongo, Node e Express
+- Utilização das arquiteturas MSC e REST na API
+- Utilização de conceitos de SOLID e Clean Code para a criação de classes na API
 
-### Frontend (api)
-- [x] Listar tarefas
-- [x] Adicionar tarefas
-- [x] Editar tarefas
-- [x] Remover tarefas
-- [x] Ordenar tarefas
-- [x] Alterar status da tarefa
-- [x] Estilização inicial
-- [x] Dark mode
+### UI
+- Vite React com Context API
+- Chakra UI para estilização dos componentes da UI
 
-### Backend (api)
-- [x] GET `/todos`
-- [x] POST `/todos`
-- [x] PUT `/todos/:id`
-- [x] DELETE `/todos/:id`
-- [x] PATCH `/todos/:id/status`
+### Testes e Qualidade de código
+- Husky para checagem de código pré-push
+- Typescript para tipagem estática
+- Eslint para consistência do código
+- Testes unitários e de integração com Mocha, RTL, Chai e Sinon
+- Mock de API para os testes de UI com MSW
+- Code coverage com NYC
+- Stryker para testes de mutação
+- Testes com casos de uso usando escrita natural com Gherkin, Cucumber e Cypress
+- [Plano de testes](docs/TESTING.md)
 
-### App
-- [x] Dockerizar
-- [x] Deploy
+### DevOps
+- Proxy reverso com NGINX
+- Docker para conteinerização da aplicação
+- CI com GitHub Actions para testagem de código ao criar Pull Requests e fazer push
+- Deploy do Docker Compose usando a plataforma Okteto
+- [Roadmap](docs/ROADMAP.md)
