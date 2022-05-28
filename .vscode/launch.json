@@ -1,0 +1,58 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch API Debug",
+      "request": "launch",
+      "runtimeArgs": [
+        "dev:api"
+      ],
+      "runtimeExecutable": "yarn",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "Launch UI Debug",
+      "request": "launch",
+      "runtimeArgs": [
+        "dev:ui"
+      ],
+      "runtimeExecutable": "yarn",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "Launch UI Web Debug",
+      "request": "launch",
+      "type": "chrome",
+      "runtimeExecutable": "/usr/bin/vivaldi-stable",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/ui"
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Run UI Test Debug",
+      "cwd": "${workspaceFolder}/ui",
+      "autoAttachChildProcesses": true,
+      "skipFiles": [
+        "<node_internals>/**",
+        "**/node_modules/**"
+      ],
+      "program": "${cwd}/ui/node_modules/vitest/vitest.mjs",
+      "args": [
+        "run",
+        "${relativeFile}"
+      ],
+      "smartStep": true,
+      "console": "integratedTerminal"
+    }
+  ]
+}
