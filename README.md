@@ -6,8 +6,8 @@ Aplicação estilo lista de tarefas em desenvolvimento para o Desafio da Blitz d
 
 Com esse app é possível:
 - Listar e ordenar tarefas pela descrição, data de criação e status
-- [WIP] Criar, editar e remover tarefas
-- [WIP] Alterar status de uma tarefa
+- Criar, editar e remover tarefas
+- Alterar status de uma tarefa
 
 ## Demonstração
 
@@ -58,17 +58,19 @@ yarn compose:up
 ### Frontend (api)
 - [x] Listar tarefas
 - [x] Adicionar tarefas
-- [ ] Editar tarefas
-- [ ] Remover tarefas
-- [ ] Alterar status da tarefa
+- [x] Editar tarefas
+- [x] Remover tarefas
+- [x] Ordenar tarefas
+- [x] Alterar status da tarefa
 - [x] Estilização inicial
 - [x] Dark mode
 
 ### Backend (api)
 - [x] GET `/todos`
 - [x] POST `/todos`
-- [x] PUT `/todos`
-- [x] DELETE `/todos`
+- [x] PUT `/todos/:id`
+- [x] DELETE `/todos/:id`
+- [x] PATCH `/todos/:id/status`
 
 ### App
 - [x] Dockerizar
