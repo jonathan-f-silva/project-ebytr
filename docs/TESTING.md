@@ -19,7 +19,9 @@
   - UI
     - Páginas: Vitest
     - Componentes: Vitest
-
+- Verificação de testes
+  - Code coverage
+  - Stryker
 
 ## Mitigação de riscos
 - Husky configurado para evitar commits que falham em testes unitários ou linter
