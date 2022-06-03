@@ -15,34 +15,6 @@ Com esse app é possível:
 
 > Acesse o [deploy da aplicação aqui](https://ebytr-jonathan-f-silva.cloud.okteto.net)
 
-## Rodando localmente
-
-É necessário ter [Git](https://git-scm.com), [Node 16](https://nodejs.org/pt-br/) e [Yarn](https://yarnpkg.com/getting-started/install) instalados na máquina. Para desenvolvimento, é recomendado usar o [VSCode](https://code.visualstudio.com).
-
-- Clone o repositório
-```shell
-git clone https://github.com/jonathan-f-silva/project-ebytr
-```
-
-- Instale as dependências
-```shell
-yarn
-```
-
-- Para iniciar em modo de desenvolvimento
-```shell
-yarn dev
-```
-
-- Para abrir os testes E2E no Cypress
-```shell
-yarn cy:open
-```
-
-Caso tenha o Docker Compose instalado, é possível rodar o sistema usando
-```shell
-yarn compose:up
-```
 
 ## Aprendizados e Tecnologias
 
@@ -75,3 +47,33 @@ conceitos bacanas que queria utilizar, aqui uma lista:
 - CI com GitHub Actions para testagem de código ao criar Pull Requests e fazer push
 - Deploy do Docker Compose usando a plataforma Okteto
 - [Roadmap](docs/ROADMAP.md)
+
+
+## Rodando localmente
+
+É necessário ter [Git](https://git-scm.com), [Node 16](https://nodejs.org/pt-br/) e [Yarn](https://yarnpkg.com/getting-started/install) instalados na máquina. Para desenvolvimento, é recomendado usar o [VSCode](https://code.visualstudio.com).
+
+- Clone o repositório
+```shell
+git clone https://github.com/jonathan-f-silva/project-ebytr
+```
+
+- Instale as dependências
+```shell
+yarn
+```
+
+- Para iniciar em modo de desenvolvimento
+```shell
+yarn dev
+```
+
+- Para abrir os testes E2E no Cypress
+```shell
+yarn cy:open
+```
+
+Caso tenha o Docker Compose instalado, é possível rodar o sistema usando
+```shell
+yarn compose:up
+```
