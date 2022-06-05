@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:alpine
 
 ARG NGINX_CONFIG_FILE=default.conf
 

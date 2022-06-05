@@ -17,13 +17,13 @@ services:
   ui:
     build: 
       context: ui
-      target: builder
+      target: development
     ports:
       - 3000
       - 3002
     command: yarn vite -c vite.config.docker.ts
     volumes:
-      - ./ui:/app
+      - ./ui/src:/app/src
     depends_on:
       api:
         condition: service_healthy
@@ -34,12 +34,14 @@ services:
       retries: 5
 
   api:
-    build: api
+    build: 
+      context: api
+      target: development
     ports:
       - 3001
     command: yarn dev
     volumes:
-      - ./api:/app
+      - ./api/src:/app/src
     environment:
       - DB_HOST=db
     depends_on:
