@@ -10,17 +10,16 @@
     "compose:down": "docker-compose down",
     "cy:open": "cypress open",
     "dev": "docker compose -f docker-compose.dev.yml up",
+    "lint": "cd api && npm run lint; cd ../ui && npm run lint",
     "postinstall": "cd api && npm install; cd ../ui && npm install",
     "prepare": "husky install",
-    "test:compile": "tsc --noEmit",
     "test:api": "cd api && npm test",
     "test:api:coverage": "cd api && npm run test:coverage",
     "test:ui": "cd ui && npm test",
     "test:ui:coverage": "cd ui && npm run test:coverage",
     "test:coverage": "npm run test:api:coverage && npm run test:ui:coverage",
-    "test:lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test:unit": "npm run test:api && npm run test:ui",
-    "test": "npm run test:compile && npm run test:lint && npm run test:unit"
+    "test": "npm run lint && npm run test:unit"
   },
   "repository": {
     "type": "git",
@@ -42,27 +41,9 @@
     "nonGlobalStepDefinitions": true
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.23.0",
-    "@typescript-eslint/parser": "^5.23.0",
     "cypress": "^9.6.1",
     "cypress-cucumber-preprocessor": "^4.3.1",
-    "eslint": "^7.32.0 || ^8.2.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-config-trybe-backend": "^1.0.4",
-    "eslint-config-trybe-frontend": "^1.2.3",
-    "eslint-import-resolver-typescript": "^2.7.1",
-    "eslint-plugin-chai-friendly": "^0.7.2",
-    "eslint-plugin-cypress": "^2.12.1",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-n": "^15.0.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-sonarjs": "^0.13.0",
-    "husky": "^8.0.1",
-    "typescript": "^4.6.4"
+    "husky": "^8.0.1"
   },
   "dependencies": {
     "mongodb": "^4.6.0"
