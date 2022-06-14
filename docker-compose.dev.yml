@@ -22,7 +22,6 @@ services:
     ports:
       - 3000
       - 3002
-    command: yarn vite -c vite.config.docker.ts
     volumes:
       - ./ui/src:/app/src
     depends_on:
@@ -39,8 +38,7 @@ services:
       context: api
       target: development
     ports:
-      - 3001
-    command: yarn dev
+      - 3001:3001
     volumes:
       - ./api/src:/app/src
     environment:
@@ -57,7 +55,7 @@ services:
   db:
     image: mongo:5
     ports:
-      - 27017
+      - 27017:27017
     restart: always
     healthcheck:
       test: ["CMD", "pgrep", "mongod"]

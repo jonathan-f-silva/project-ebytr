@@ -72,10 +72,10 @@ docker compose up -f docker-compose.dev.yml -d
 
 - Para abrir os testes E2E no Cypress, é preciso ter 
 ```shell
-yarn cy:open
+npm run cy:open
 ```
 
 Caso tenha o Docker Compose instalado, é possível rodar o sistema usando
 ```shell
-yarn compose:up
+npm run compose:up
 ```
