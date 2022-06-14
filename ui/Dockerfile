@@ -11,7 +11,7 @@ FROM development AS builder
 RUN yarn build
 
 # Stage 3 - Set up build files on Nginx
-FROM nginx:alpine AS production-build
+FROM nginx:alpine AS production
 EXPOSE 80
 COPY ./deploy/nginx/nginx.conf /etc/nginx/nginx.conf
 WORKDIR /usr/share/nginx/html
