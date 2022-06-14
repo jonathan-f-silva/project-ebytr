@@ -51,24 +51,26 @@ conceitos bacanas que queria utilizar, aqui uma lista:
 
 ## Rodando localmente
 
-É necessário ter [Git](https://git-scm.com), [Node 16](https://nodejs.org/pt-br/) e [Yarn](https://yarnpkg.com/getting-started/install) instalados na máquina. Para desenvolvimento, é recomendado usar o [VSCode](https://code.visualstudio.com).
+É necessário ter [Docker](https://docs.docker.com/get-docker/) instalado na máquina.
+Para desenvolvimento, é recomendado usar o [VSCode](https://code.visualstudio.com).
 
 - Clone o repositório
 ```shell
 git clone https://github.com/jonathan-f-silva/project-ebytr
 ```
 
-- Instale as dependências
+- Para iniciar
 ```shell
-yarn
+docker compose up -d
 ```
 
-- Para iniciar em modo de desenvolvimento
+- Para iniciar em modo de desenvolvimento com hot reloading
 ```shell
-yarn dev
+docker compose up -f docker-compose.dev.yml -d
 ```
 
-- Para abrir os testes E2E no Cypress
+
+- Para abrir os testes E2E no Cypress, é preciso ter 
 ```shell
 yarn cy:open
 ```

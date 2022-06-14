@@ -1,8 +1,12 @@
 services:
   ebytr:
-    build: reverse-proxy
+    build: 
+      context: reverse-proxy
+      args:
+        NGINX_CONFIG_FILE: dev.conf
     ports:
-      - 80:80
+      - 3000:3000
+      - 3002:3002
     depends_on:
       api:
         condition: service_healthy
@@ -11,24 +15,33 @@ services:
     restart: always
 
   ui:
-    build: ui
+    build: 
+      context: ui
+      target: development
     ports:
-      - 80
-    environment:
-      - VITE_BACKEND=api:3001
+      - 3000
+      - 3002
+    command: yarn vite -c vite.config.docker.ts
+    volumes:
+      - ./ui/src:/app/src
     depends_on:
       api:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "lsof", "-t", "-i:80"]
+      test: ["CMD", "lsof", "-t", "-i:3000"]
       interval: 3s
       timeout: 10s
       retries: 5
 
   api:
-    build: api
+    build: 
+      context: api
+      target: development
     ports:
       - 3001
+    command: yarn dev
+    volumes:
+      - ./api/src:/app/src
     environment:
       - DB_HOST=db
     depends_on:
