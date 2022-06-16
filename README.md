@@ -13,7 +13,7 @@ Com esse app é possível:
 
 ![Adicionando duas tarefas do Ebytr ToDo](docs/ebytr-demo.gif)
 
-> Acesse o [deploy da aplicação aqui](https://mog-ebytr-api-prod-j0n4t-6lcuxg.mo1.mogenius.io)
+> Acesse o [deploy da aplicação aqui](https://project-eby001-prod-j0n4t-6lcuxg.mo1.mogenius.io)
 
 
 ## Aprendizados e Tecnologias
