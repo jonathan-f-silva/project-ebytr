@@ -13,7 +13,7 @@ Com esse app é possível:
 
 ![Adicionando duas tarefas do Ebytr ToDo](docs/ebytr-demo.gif)
 
-> Acesse o [deploy da aplicação aqui](https://ebytr-jonathan-f-silva.cloud.okteto.net)
+> Acesse o [deploy da aplicação aqui](https://mog-ebytr-api-prod-j0n4t-6lcuxg.mo1.mogenius.io)
 
 
 ## Aprendizados e Tecnologias
@@ -46,17 +46,24 @@ conceitos bacanas que queria utilizar, aqui uma lista:
 - Docker para conteinerização da aplicação
 - CI com GitHub Actions para testagem de código ao criar Pull Requests e fazer push
 - Deploy do Docker Compose usando a plataforma Okteto
+- Deploy de containers individuais na plataforma Mogenius
 - [Roadmap](docs/ROADMAP.md)
 
 
 ## Rodando localmente
 
-É necessário ter [Docker](https://docs.docker.com/get-docker/) instalado na máquina.
+É necessário ter [Docker](https://docs.docker.com/get-docker/) e [Node 16](https://nodejs.org/pt-br/) instalados na máquina.
 Para desenvolvimento, é recomendado usar o [VSCode](https://code.visualstudio.com).
 
 - Clone o repositório
 ```shell
 git clone https://github.com/jonathan-f-silva/project-ebytr
+```
+
+- Entre da pasta e instale as dependências
+```shell
+cd project-ebytr
+npm install
 ```
 
 - Para iniciar
@@ -70,7 +77,7 @@ docker compose up -f docker-compose.dev.yml -d
 ```
 
 
-- Para abrir os testes E2E no Cypress, é preciso ter 
+- Para abrir os testes E2E no Cypress
 ```shell
 npm run cy:open
 ```

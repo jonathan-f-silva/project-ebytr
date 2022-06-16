@@ -16,14 +16,14 @@ services:
       context: ui
       target: production
     ports:
-      - 80
+      - 8080
     environment:
-      - VITE_BACKEND=api:3001
+      - VITE_API_URL=http://api:3001
     depends_on:
       api:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "lsof", "-t", "-i:80"]
+      test: ["CMD", "lsof", "-t", "-i:8080"]
       interval: 3s
       timeout: 10s
       retries: 5
@@ -35,7 +35,7 @@ services:
     ports:
       - 3001
     environment:
-      - DB_HOST=db
+      - MONGO_DB_URL=mongodb://db:27017/Ebytr
     depends_on:
       db:
         condition: service_healthy
