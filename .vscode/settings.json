@@ -1,12 +1,16 @@
 {
   "cSpell.words": [
+    "badeball",
+    "bahmutov",
     "ebytr",
     "Ebytr",
+    "esbuild",
+    "Esbuild",
     "maaaravilhoso",
     "testids"
   ],
   "vitest.enable": true,
-  "vitest.commandLine": "yarn test:ui",
+  "vitest.commandLine": "npm run test:ui",
   "vitest.include": [
     "ui/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"
   ]

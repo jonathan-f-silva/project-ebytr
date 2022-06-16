@@ -1,0 +1,9 @@
+[submodule "api"]
+	path = api
+	url = git@github.com:jonathan-f-silva/project-ebytr-api.git
+[submodule "ui"]
+	path = ui
+	url = git@github.com:jonathan-f-silva/project-ebytr-ui.git
+[submodule "tests"]
+	path = tests
+	url = git@github.com:jonathan-f-silva/project-ebytr-tests.git

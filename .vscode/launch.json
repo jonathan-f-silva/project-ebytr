@@ -8,9 +8,8 @@
       "name": "Launch API Debug",
       "request": "launch",
       "runtimeArgs": [
-        "dev:api"
+        "run dev:api"
       ],
-      "runtimeExecutable": "yarn",
       "skipFiles": [
         "<node_internals>/**"
       ],
@@ -22,7 +21,6 @@
       "runtimeArgs": [
         "dev:ui"
       ],
-      "runtimeExecutable": "yarn",
       "skipFiles": [
         "<node_internals>/**"
       ],
